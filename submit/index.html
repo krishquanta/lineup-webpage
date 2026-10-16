@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit an Idea — Lineup</title>
+  <meta name="description" content="Submit your student or youth project idea to Lineup.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-text">
+        Lineup
+        <span class="brand-dot" aria-hidden="true"></span>
+      </a>
+
+      <div class="header-socials">
+        <a href="https://www.instagram.com/lineup.groups" target="_blank" rel="noopener noreferrer" class="header-social-link">
+          <span>Instagram</span> &nearr;
+        </a>
+        <a href="mailto:lineup.groups@gmail.com" class="header-social-link">
+          <span>Email</span> &nearr;
+        </a>
+        <span class="header-social-link disabled" title="LinkedIn page launching soon">
+          <span>LinkedIn</span> <small>(Soon)</small>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="container page-header">
+      <div class="hero-meta">
+        <span class="badge badge-accent">Creator Proposal</span>
+        <span class="badge badge-outline">Ages 16–30</span>
+      </div>
+
+      <h1 class="page-title">Submit your project idea.</h1>
+      <p class="page-intro">
+        Tell us what you're working on. We look for student-led and youth initiatives tackling real problems, creating open tools, building prototypes, or launching creative work.
+      </p>
+
+      <!-- Optional reminder if Supabase credentials haven't been added yet -->
+      <div id="config-banner" class="config-banner" style="display: none;">
+        <strong>Database Notice:</strong> To save submissions directly to your Supabase database, remember to paste your <code>SUPABASE_URL</code> and <code>SUPABASE_ANON_KEY</code> inside <code>js/config.js</code> and run the SQL table script from <code>supabase_schema.sql</code>.
+      </div>
+
+      <!-- Success & Error Notices -->
+      <div id="notice-success" class="form-notice success" role="alert">
+        <strong>Idea submitted successfully.</strong> Thank you for sharing your project. The Lineup founding team reviews every proposal directly and will reach out via email for early access and onboarding.
+      </div>
+
+      <div id="notice-error" class="form-notice error" role="alert"></div>
+
+      <!-- Submission Form -->
+      <form id="idea-form" novalidate>
+        <div class="form-group">
+          <label for="full_name">Your Name</label>
+          <input type="text" id="full_name" name="full_name" placeholder="e.g. Aarav Sharma" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="age">Your Age <span class="hint">(Lineup is designed for youth ages 16–30)</span></label>
+          <input type="number" id="age" name="age" min="14" max="35" placeholder="e.g. 18" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Contact Email</label>
+          <input type="email" id="email" name="email" placeholder="e.g. aarav@example.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="project_title">Project or Concept Name</label>
+          <input type="text" id="project_title" name="project_title" placeholder="e.g. SolarPurifier or MicroLearn" required>
+        </div>
+
+        <div class="form-group">
+          <label for="idea_description">What is the idea? <span class="hint">(Explain what problem it solves and how it works)</span></label>
+          <textarea id="idea_description" name="idea_description" rows="4" placeholder="Briefly describe what you are building, the problem you're addressing, and your progress so far..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="funding_goal">What would you use your initial funding for?</label>
+          <textarea id="funding_goal" name="funding_goal" rows="3" placeholder="e.g. ₹25,000 for electronic components, 3D printing prototypes, and basic web hosting..." required></textarea>
+        </div>
+
+        <div style="margin-top: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <button type="submit" id="submit-btn" class="btn">Submit Proposal</button>
+          <a href="../waitlist/index.html" class="subtle-nav-link" style="margin-top: 0;">&larr; Back to Waitlist</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-text">
+            Lineup
+            <span class="brand-dot" aria-hidden="true"></span>
+          </span>
+          <p>
+            India’s first youth-focused crowdfunding platform. For students, teens, and innovators building the Idea Nation™.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <span class="footer-links-title">Connect</span>
+          <a href="https://www.instagram.com/lineup.groups" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram (@lineup.groups)</a>
+          <a href="mailto:lineup.groups@gmail.com" class="footer-link">Email (lineup.groups@gmail.com)</a>
+          <span class="footer-link" style="color: var(--text-faint); cursor: default;">LinkedIn (Coming Soon)</span>
+        </div>
+
+        <div class="footer-links-group">
+          <span class="footer-links-title">Navigation</span>
+          <a href="../index.html" class="footer-link">&larr; Return to Overview</a>
+          <a href="../waitlist/index.html" class="footer-link">Waitlist Page</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; Lineup &middot; For the Idea Nation™</span>
+        <span>We don't need a nation of workers. We need a nation of thinkers.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/submit.js"></script>
+</body>
+</html>
