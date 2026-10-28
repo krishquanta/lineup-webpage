@@ -823,6 +823,40 @@ textarea {
   color: var(--accent);
 }
 
+/* FAQ Section */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background-color: var(--bg-card);
+  padding: 1.75rem;
+  transition: border-color 0.15s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--accent-border);
+}
+
+.faq-question {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: -0.015em;
+  margin-bottom: 0.65rem;
+}
+
+.faq-answer {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .pros-grid,

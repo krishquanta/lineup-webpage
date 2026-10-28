@@ -1,0 +1,15 @@
+# Robots.txt for Lineup — For the Idea Nation™
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /favicon.svg
+
+# Keep waitlist and submit pages unlisted from search indexing
+Disallow: /waitlist/
+Disallow: /waitlist
+Disallow: /submit/
+Disallow: /submit
+
+# Sitemap location
+Sitemap: https://krishquanta.github.io/lineup-webpage/sitemap.xml
